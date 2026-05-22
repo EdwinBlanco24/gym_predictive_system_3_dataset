@@ -50,10 +50,14 @@ X_train, X_test, y_train, y_test = train_test_split(
 # SMOTE BALANCING
 # -----------------------------
 smote = SMOTE(random_state=42)
-X_train, y_train = smote.fit_resample(
+
+resampled = smote.fit_resample(
     X_train,
     y_train
 )
+
+X_train = resampled[0]
+y_train = resampled[1]
 
 # -----------------------------
 # MODEL

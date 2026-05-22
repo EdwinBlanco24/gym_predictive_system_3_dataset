@@ -6,7 +6,7 @@ import psycopg2
 # -----------------------------
 def connect_db():
     return psycopg2.connect(
-        host="localhost",
+        host="127.0.0.1",
         database="gym_predictive_system",
         user="postgres",
         password="9518746230.",
